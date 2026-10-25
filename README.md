@@ -18,13 +18,20 @@
 
 ## 📌 Overview
 
-UEBA Login Anomaly Engine
+
+OShield is a user-and-entity behaviour analytics (UEBA) engine that detects anomalous login activity from authentication data. It combines kernel-density estimation with temporal, geographic, velocity and device signals, applying decay weighting so recent behaviour counts more. It is built for authorized security analysis on Debian Linux and produces risk-scored findings from your login history.
 
 ---
 
 ## ✨ Features
 
-- UEBA login behavior anomaly engine using KDE statistical baselines
+
+- Login-behaviour anomaly scoring via kernel density estimation (KDE)
+- Temporal, geographic, velocity and device-fingerprint signals combined into one risk model
+- Time-decay weighting so recent events carry more influence than stale history
+- Reads login/auth event data and surfaces unusual sessions for review
+- Offline, read-only analysis intended for authorized security work only
+- Built-in --self-test mode plus --version/--help entry points
 
 ---
 
@@ -37,8 +44,11 @@ UEBA Login Anomaly Engine
 
 ## 🚀 Usage
 
+
 ```bash
 ./OShield
+./OShield --self-test
+./OShield --help
 ```
 
 ---
